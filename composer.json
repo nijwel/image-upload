@@ -1,0 +1,24 @@
+{
+    "name": "nijwel/image-upload",
+    "description": "Image upload package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nijwel",
+            "email": "nijwel09@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nijwel\\ImageUpload\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nijwel\\ImageUpload\\ImageUploadServiceProvider"
+            ]
+        }
+    }
+}
