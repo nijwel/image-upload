@@ -42,7 +42,7 @@ imageUpload($image, $width, $height, $path ,$newImageName );
 ```
 
 ## Methods
-`upload($file, $newImageName = null, $width = null, $height = null, $path = 'images/')`
+`imageUpload($file, $newImageName = null, $width = null, $height = null, $path = 'images/')`
 
 Uploads and resizes the image.
 
