@@ -35,7 +35,7 @@ $width = 200; // Desired width, (if you want to original image width pass value 
 $height = null; // Desired height (null means maintain aspect ratio , You can handle manually)
 $path = 'backend/assets/images/'; // Directory to save the image
 
-// Just call your method
+// Just call in your method
 imageUpload($image, $width, $height, $path ,$newImageName );
 
 
