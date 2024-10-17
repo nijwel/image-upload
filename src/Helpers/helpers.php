@@ -86,3 +86,24 @@ function imageUpload($file, $width = null, $height = null, $path = null, $newIma
 
     return "{$path}/{$newImageName}{$fileExtension}";
 }
+
+function fileUpload( $file, $path = null, $newFileName = null ) {
+    // Generate a unique filename if not provided
+    $extension = $file->getClientOriginalExtension();
+
+    $newFileName = !$newFileName ? uniqid() . '.' . $extension : $newFileName . '.' . $extension;
+
+    // Set default path if not provided
+    $filePath = $path ? $path : 'backend/assets/files/employee/document';
+
+    // Ensure the directory exists
+    if ( !File::exists( $filePath ) ) {
+        File::makeDirectory( $filePath, 0755, true );
+    }
+
+    // Save the file to the specified path
+    $file->move( $filePath, $newFileName );
+
+    // Return the full path to the uploaded file
+    return "{$filePath}/{$newFileName}";
+}
