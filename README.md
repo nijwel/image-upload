@@ -25,6 +25,8 @@ No configuration is required to start using the package. However, you can custom
 
 Here’s a simple example of how to use the package to upload and resize an image:
 
+## For v1.0.0
+
 ```bash
 
 use Nijwel\ImageUpload\ImageUpload;
@@ -36,13 +38,33 @@ $height = null; // Desired height (null means maintain aspect ratio , You can ha
 $path = 'backend/assets/images/'; // Directory to save the image
 
 // Just call in your method
+
+// Upload an image
 imageUpload($image, $width, $height, $path ,$newImageName );
 
+// Upload a file
+$filePath = fileUpload($file, 'custom/path', 'newFileName');
 
 ```
 
-## Methods
+## For v^1.0
+```bash
+// Just call in your method for version v^1.0
+use ImageUpload;
+
+// Upload an image
+$imagePath = ImageUpload::imageUpload($file, 300, 300, 'custom/path', 'newImageName');
+
+// Upload a file
+$filePath = ImageUpload::fileUpload($file, 'custom/path', 'newFileName');
+
+```
+
+## Methods v1.0.0
 `imageUpload($file, $newImageName = null, $width = null, $height = null, $path = 'images/')`
+
+## Methods v^1.0
+`ImageUpload::imageUpload($file, $newImageName = null, $width = null, $height = null, $path = 'images/')`
 
 Uploads and resizes the image.
 
