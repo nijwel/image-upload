@@ -3,6 +3,7 @@
   "description": "Image upload package for Laravel",
   "type": "library",
   "license": "MIT",
+  "version": "1.0.1",
   "require": {
     "php": "^8.0",
     "guzzlehttp/guzzle": "^7.2",
@@ -36,7 +37,10 @@
     "laravel": {
       "providers": [
         "Nijwel\\ImageUpload\\ImageUploadServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "ImageUpload": "Nijwel\\ImageUpload\\Facades\\ImageUploadFacade"
+      }
     }
   }
 }
